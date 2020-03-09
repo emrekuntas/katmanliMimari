@@ -1,0 +1,169 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+<div class="block-header">
+    <h2>Ana Sayfa</h2>
+    <hr style="border-top: 1px dashed white;" />
+</div>
+
+<!--Donut cart-->
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.css">
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.min.js"></script>
+
+<div class="row clearfix">
+    <!-- Visitors -->
+    <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+        <div class="card">
+            <div class="body bg-white">
+                <div class="font-bold m-b--35">Güncel Ödeme Talepleri</div>
+                <ul class="dashboard-stat-list">
+                    <li>
+                        TODAY
+                        <span class="pull-right"><b>12</b> <small>TICKETS</small></span>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- #END# Visitors -->
+
+    <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+        <div class="card">
+            <div class="body bg-white">
+                <div class="m-b--35 font-bold">Güncel İzin Talepleri</div>
+                <ul class="dashboard-stat-list">
+                    <li>
+                        #socialtrends
+                        <span class="pull-right">
+                            <i class="material-icons">trending_up</i>
+                        </span>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+        <div class="card">
+            <div class="body bg-white">
+                <div class="font-bold m-b--35">Güncel Fazla Mesai Talepleri</div>
+                <ul class="dashboard-stat-list">
+                    <li>
+                        TODAY
+                        <span class="pull-right"><b>12</b> <small>TICKETS</small></span>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</div>
+<div class="row clearfix">
+    <!-- Task Info -->
+    <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+        <div class="card">
+            <div class="body bg-white">
+                <div class="font-bold m-b--35">Yaklaşan İzinler</div>
+                <ul class="dashboard-stat-list">
+                    <li>
+                        <span class="pull-right"></span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+    <!-- #END# Task Info -->
+    <!-- Browser Usage -->
+    <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+        <div class="card">
+            <div class="body bg-white">
+                <div class="font-bold m-b--35">Yaklaşan Resmi Tatiller</div>
+                <ul class="dashboard-stat-list">
+                    <li>
+                        Cumhuriyet Bayramı
+                        <span class="pull-right">29 Ekim 2019</span>
+                    </li>
+
+
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+        <div class="card">
+            <div class="body bg-white">
+                <div class="font-bold m-b--35">Yaklaşan Doğum Günleri</div>
+                <ul class="dashboard-stat-list">
+                    <li>
+                        TODAY
+                        <span class="pull-right"><b>12</b> <small>TICKETS</small></span>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row clearfix">
+    <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+        <div class="card">
+            <div class="header">
+                <h2>Çalışan Dağılımı</h2>
+            </div>
+            <div class="body">
+                <div id="donut_chart1" class="graph"></div>
+                <script>
+                    Morris.Donut({
+                        element: "donut_chart1",
+                        data: [{
+                            label: 'Yazılım',
+                            value: 25
+                        }, {
+                            label: 'Android',
+                            value: 40
+                        }, {
+                            label: 'İos',
+                            value: 25
+                        }, {
+                            label: 'Database',
+                            value: 10
+                        }],
+                        colors: ['rgb(233, 30, 99)', 'rgb(0, 188, 212)', 'rgb(255, 152, 0)', 'rgb(0, 150, 136)'],
+                        formatter: function (y) {
+                            return y + '%'
+                        }
+                    });
+                </script>
+            </div>
+        </div>
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+        <div class="card">
+            <div class="body bg-white">
+                <div class="font-bold m-b--35">Güncel Etkinlik Takvimi</div>
+                <ul class="dashboard-stat-list">
+                    <li>
+                        TODAY
+                        <span class="pull-right"><b>12</b> <small>TICKETS</small></span>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </div>
+   
+
+
+</div>
+
+
+
+

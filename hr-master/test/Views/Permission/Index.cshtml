@@ -1,0 +1,533 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous"></script>
+<script src="/adminPage/js/pages/tables/jquery-datatable.js"></script>
+
+<div class="row clearfix">
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <div class="card">
+            <div class="header">
+                <h2>
+                    İzinler
+                </h2><br />
+                <p>Çalışan izin İşlemleri bu ekran aracılığıyla yapılır.</p>
+            </div>
+            <div class="body">
+                <!-- Nav tabs -->
+                <ul class="nav nav-tabs" role="tablist">
+                    <li role="presentation" class="active">
+                        <a href="#izinlerTab" data-toggle="tab">
+                            İzinler
+                        </a>
+                    </li>
+                    <li role="presentation">
+                        <a href="#raporOlusturTab" data-toggle="tab">
+                            Rapor Oluştur
+                        </a>
+                    </li>
+                  
+                </ul>
+
+                <!-- Tab panes -->
+                <div class="tab-content">
+                    <div role="tabpanel" class="tab-pane fade in active" id="izinlerTab">
+                        <div class="row clearfix">
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                <div class="body">
+                                    <!-- Nav tabs -->
+                                    <ul class="nav nav-tabs" role="tablist">
+                                        <li role="presentation" class="active">
+                                            <a href="#yaklasanlar" data-toggle="tab">
+                                                <i class="material-icons">alarm</i> Yaklaşanlar
+                                            </a>
+                                        </li>
+                                        <li role="presentation">
+                                            <a href="#onayBekleyenler" data-toggle="tab">
+                                                <i class="material-icons">lock_outline</i> Onay Bekleyenler
+                                            </a>
+                                        </li>
+                                        <li role="presentation">
+                                            <a href="#onaylananlar" data-toggle="tab">
+                                                <i class="material-icons">check_circle</i> Onaylananlar
+                                            </a>
+                                        </li>
+                                        <li role="presentation">
+                                            <a href="#reddedilenler" data-toggle="tab">
+                                                <i class="material-icons">delete_forever</i> Reddedilenler
+                                            </a>
+                                        </li>
+                                    </ul>
+
+                                    <!-- Tab panes -->
+                                    <div class="tab-content">
+                                        <div role="tabpanel" class="tab-pane fade in active" id="yaklasanlar">
+                                            <div class="row clearfix">
+                                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                                    <div class="body">
+                                                        <div class="table-responsive">
+                                                            <table class="table table-bordered table-striped table-hover js-basic-example dataTable">
+                                                                <thead>
+                                                                    <tr>
+                                                                        <th>Ad Soyad</th>
+                                                                        <th>İzin Türü</th>
+                                                                        <th>Gün</th>
+                                                                        <th>Başlangıç Tarihi</th>
+                                                                        <th>Bitiş Tarihi</th>
+
+                                                                    </tr>
+                                                                </thead>
+
+                                                                <tbody>
+
+                                                                    <tr>
+                                                                        <td>Sonya Frost</td>
+                                                                        <td>Yıllık</td>
+                                                                        <td>14</td>
+                                                                        <td>2008/12/19</td>
+                                                                        <td>2008/12/13</td>
+
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>Jena Gaines</td>
+                                                                        <td>haftalık</td>
+                                                                        <td>5</td>
+                                                                        <td>2008/12/13</td>
+                                                                        <td>2008/12/19</td>
+                                                                    </tr>
+
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div role="tabpanel" class="tab-pane fade" id="onayBekleyenler">
+                                            <div class="row clearfix">
+                                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                                    <div class="body">
+                                                        <div class="table-responsive">
+                                                            <table class="table table-bordered table-striped table-hover js-basic-example dataTable">
+                                                                <thead>
+                                                                    <tr>
+                                                                        <th>Ad Soyad</th>
+                                                                        <th>İzin Türü</th>
+                                                                        <th>Gün</th>
+                                                                        <th>Başlangıç Tarihi</th>
+                                                                        <th>Bitiş Tarihi</th>
+
+                                                                    </tr>
+                                                                </thead>
+
+                                                                <tbody>
+
+                                                                    <tr>
+                                                                        <td>Sonya Frost</td>
+                                                                        <td>Software Engineer</td>
+                                                                        <td>Edinburgh</td>
+                                                                        <td>23</td>
+                                                                        <td>2008/12/13</td>
+
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>Jena Gaines</td>
+                                                                        <td>Office Manager</td>
+                                                                        <td>London</td>
+                                                                        <td>30</td>
+                                                                        <td>2008/12/19</td>
+
+                                                                    </tr>
+
+                                                                    <tr>
+                                                                        <td>Jenette Caldwell</td>
+                                                                        <td>Development Lead</td>
+                                                                        <td>New York</td>
+                                                                        <td>30</td>
+                                                                        <td>2011/09/03</td>
+
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>Yuri Berry</td>
+                                                                        <td>Chief Marketing Officer (CMO)</td>
+                                                                        <td>New York</td>
+                                                                        <td>40</td>
+                                                                        <td>2009/06/25</td>
+
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>Caesar Vance</td>
+                                                                        <td>Pre-Sales Support</td>
+                                                                        <td>New York</td>
+                                                                        <td>21</td>
+                                                                        <td>2011/12/12</td>
+
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>Doris Wilder</td>
+                                                                        <td>Sales Assistant</td>
+                                                                        <td>Sidney</td>
+                                                                        <td>23</td>
+                                                                        <td>2010/09/20</td>
+
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>Angelica Ramos</td>
+                                                                        <td>Chief Executive Officer (CEO)</td>
+                                                                        <td>London</td>
+                                                                        <td>47</td>
+                                                                        <td>2009/10/09</td>
+
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div role="tabpanel" class="tab-pane fade" id="onaylananlar">
+                                            <div class="row clearfix">
+                                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                                    <div class="body">
+                                                        <div class="table-responsive">
+                                                            <table class="table table-bordered table-striped table-hover js-basic-example dataTable">
+                                                                <thead>
+                                                                    <tr>
+                                                                        <th>Ad Soyad</th>
+                                                                        <th>İzin Türü</th>
+                                                                        <th>Gün</th>
+                                                                        <th>Başlangıç Tarihi</th>
+                                                                        <th>Bitiş Tarihi</th>
+
+                                                                    </tr>
+                                                                </thead>
+
+                                                                <tbody>
+
+                                                                    <tr>
+                                                                        <td>Sonya Frost</td>
+                                                                        <td>Software Engineer</td>
+                                                                        <td>Edinburgh</td>
+                                                                        <td>23</td>
+                                                                        <td>2008/12/13</td>
+
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>Jena Gaines</td>
+                                                                        <td>Office Manager</td>
+                                                                        <td>London</td>
+                                                                        <td>30</td>
+                                                                        <td>2008/12/19</td>
+
+                                                                    </tr>
+
+                                                                    <tr>
+                                                                        <td>Jenette Caldwell</td>
+                                                                        <td>Development Lead</td>
+                                                                        <td>New York</td>
+                                                                        <td>30</td>
+                                                                        <td>2011/09/03</td>
+
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>Yuri Berry</td>
+                                                                        <td>Chief Marketing Officer (CMO)</td>
+                                                                        <td>New York</td>
+                                                                        <td>40</td>
+                                                                        <td>2009/06/25</td>
+
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>Caesar Vance</td>
+                                                                        <td>Pre-Sales Support</td>
+                                                                        <td>New York</td>
+                                                                        <td>21</td>
+                                                                        <td>2011/12/12</td>
+
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>Doris Wilder</td>
+                                                                        <td>Sales Assistant</td>
+                                                                        <td>Sidney</td>
+                                                                        <td>23</td>
+                                                                        <td>2010/09/20</td>
+
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>Angelica Ramos</td>
+                                                                        <td>Chief Executive Officer (CEO)</td>
+                                                                        <td>London</td>
+                                                                        <td>47</td>
+                                                                        <td>2009/10/09</td>
+
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div role="tabpanel" class="tab-pane fade" id="reddedilenler">
+                                            <div class="row clearfix">
+                                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                                    <div class="body">
+                                                        <div class="table-responsive">
+                                                            <table class="table table-bordered table-striped table-hover js-basic-example dataTable">
+                                                                <thead>
+                                                                    <tr>
+                                                                        <th>Ad Soyad</th>
+                                                                        <th>İzin Türü</th>
+                                                                        <th>Gün</th>
+                                                                        <th>Başlangıç Tarihi</th>
+                                                                        <th>Bitiş Tarihi</th>
+
+                                                                    </tr>
+                                                                </thead>
+
+                                                                <tbody>
+
+                                                                    <tr>
+                                                                        <td>Sonya Frost</td>
+                                                                        <td>Software Engineer</td>
+                                                                        <td>Edinburgh</td>
+                                                                        <td>23</td>
+                                                                        <td>2008/12/13</td>
+
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>Jena Gaines</td>
+                                                                        <td>Office Manager</td>
+                                                                        <td>London</td>
+                                                                        <td>30</td>
+                                                                        <td>2008/12/19</td>
+
+                                                                    </tr>
+
+                                                                    <tr>
+                                                                        <td>Jenette Caldwell</td>
+                                                                        <td>Development Lead</td>
+                                                                        <td>New York</td>
+                                                                        <td>30</td>
+                                                                        <td>2011/09/03</td>
+
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>Yuri Berry</td>
+                                                                        <td>Chief Marketing Officer (CMO)</td>
+                                                                        <td>New York</td>
+                                                                        <td>40</td>
+                                                                        <td>2009/06/25</td>
+
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>Caesar Vance</td>
+                                                                        <td>Pre-Sales Support</td>
+                                                                        <td>New York</td>
+                                                                        <td>21</td>
+                                                                        <td>2011/12/12</td>
+
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>Doris Wilder</td>
+                                                                        <td>Sales Assistant</td>
+                                                                        <td>Sidney</td>
+                                                                        <td>23</td>
+                                                                        <td>2010/09/20</td>
+
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>Angelica Ramos</td>
+                                                                        <td>Chief Executive Officer (CEO)</td>
+                                                                        <td>London</td>
+                                                                        <td>47</td>
+                                                                        <td>2009/10/09</td>
+
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div role="tabpanel" class="tab-pane fade" id="raporOlusturTab">
+                        <div class="row clearfix">
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                <div class="body">
+                                    <ul class="nav nav-tabs" role="tablist">
+                                        <li role="presentation" class="active">
+                                            <a href="#kalanİzinler" data-toggle="tab">
+                                                <i class="material-icons">accessibility</i> Kalan İzinler
+                                            </a>
+                                        </li>
+                                        <li role="presentation">
+                                            <a href="#aylikİzin" data-toggle="tab">
+                                                <i class="material-icons">assignment_returned</i> Aylık İzin Raporu
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <!--Tabs-->
+                                    <div class="tab-content">
+                                        <div role="tabpanel" class="tab-pane fade in active" id="kalanİzinler">
+                                            <div class="row clearfix">
+                                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                                    <div class="body">
+                                                        <div class="table-responsive">
+                                                            <table class="table table-bordered table-striped table-hover dataTable js-exportable">
+                                                                <thead>
+                                                                    <tr>
+                                                                        <th>Ad</th>
+                                                                        <th>Soyad</th>
+                                                                        <th>Tc Kimlik</th>
+                                                                        <th>Şirket</th>
+                                                                        <th>Şube</th>
+                                                                        <th>Departman</th>
+                                                                        <th>Unvan</th>
+                                                                        <th>İşe Giriş Tarihi</th>
+                                                                        <th>Toplam Hak Edilen</th>
+                                                                        <th>Kullanılan</th>
+                                                                        <th>Kalan</th>
+                                                                        <th>Çalışma Durumu</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td>Tiger </td>
+                                                                        <td>Nixon</td>
+                                                                        <td>211313124124</td>
+                                                                        <td>atlas</td>
+                                                                        <td>ytu</td>
+                                                                        <td>yazılım</td>
+                                                                        <td>yazılım Muh</td>
+                                                                        <td>2011/04/25</td>
+                                                                        <td>50</td>
+                                                                        <td>45</td>
+                                                                        <td>5</td>
+                                                                        <td>Aktif</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>Garrett Winters</td>
+                                                                        <td>Accountant</td>
+                                                                        <td>Tokyo</td>
+                                                                        <td>63</td>
+                                                                        <td>2011/07/25</td>
+                                                                        <td>$170,750</td>
+                                                                        <td>Garrett Winters</td>
+                                                                        <td>Accountant</td>
+                                                                        <td>Tokyo</td>
+                                                                        <td>63</td>
+                                                                        <td>2011/07/25</td>
+                                                                        <td>$170,750</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>Ashton Cox</td>
+                                                                        <td>Junior Technical Author</td>
+                                                                        <td>San Francisco</td>
+                                                                        <td>66</td>
+                                                                        <td>2009/01/12</td>
+                                                                        <td>$86,000</td>
+                                                                        <td>Garrett Winters</td>
+                                                                        <td>Accountant</td>
+                                                                        <td>Tokyo</td>
+                                                                        <td>63</td>
+                                                                        <td>2011/07/25</td>
+                                                                        <td>$170,750</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>Cedric Kelly</td>
+                                                                        <td>Senior Javascript Developer</td>
+                                                                        <td>Edinburgh</td>
+                                                                        <td>22</td>
+                                                                        <td>2012/03/29</td>
+                                                                        <td>$433,060</td>
+                                                                        <td>Garrett Winters</td>
+                                                                        <td>Accountant</td>
+                                                                        <td>Tokyo</td>
+                                                                        <td>63</td>
+                                                                        <td>2011/07/25</td>
+                                                                        <td>$170,750</td>
+                                                                    </tr>
+
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div role="tabpanel" class="tab-pane fade" id="aylikİzin">
+                                            <div class="row clearfix">
+                                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                                    <div class="body">
+                                                        <div class="table-responsive">
+                                                            <table class="table table-bordered table-striped table-hover dataTable js-exportable">
+                                                                <thead>
+                                                                    <tr>
+                                                                        <th>Ad</th>
+                                                                        <th>Soyad</th>
+                                                                        <th>Tc Kimlik No</th>
+                                                                        <th>İzin Türü</th>
+                                                                        <th>Başlangıç Tarihi</th>
+                                                                        <th>Bitiş Tarihi</th>
+                                                                        <th>Kullanılan Gün Sayısı</th>
+                                                                        <th>Açıklama</th>
+                                                                        <th>Onay Durumu</th>
+                                                                     </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                   
+                                                                    <tr>
+                                                                        <td>emre</td>
+                                                                        <td>Küntaş</td>
+                                                                        <td>3232141242141</td>
+                                                                        <td>Aylık</td>
+                                                                        <td>21.12.2006</td>
+                                                                        <td>12.12.1990</td>
+                                                                        <td>5</td>
+                                                                        <td>-</td>
+                                                                        <td>onaylı</td>
+                                                                    </tr>
+                                                                   
+                                                                   
+
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                   
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+

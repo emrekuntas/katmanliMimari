@@ -1,0 +1,47 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="row clearfix">
+    
+        <a href="@Url.Action("newWorker","Worker")" class="btn btn-primary pull-right">Yeni Çalışan Ekle</a>
+        <div class="demo-single-button-dropdowns">
+            <div class="btn-group pull-right">
+                <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                    Çalışanlar <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a href="javascript:void(0);" class="waves-effect waves-block">Aktif Çalışanlar</a></li>
+                    <li><a href="javascript:void(0);" class="waves-effect waves-block">İşten Ayrılanlar</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <hr style="border-top: 1px dashed black;" />
+
+    <div class="row clearfix">
+        <div class="col-xs-6 col-sm-2">
+            <div class="card profile-card">
+                <div class="profile-header">
+                    &nbsp;
+                </div>
+                <div class="profile-body">
+                    <div class="image-area">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/User_icon_2.svg/220px-User_icon_2.svg.png" width="48" height="48" alt="User" />
+                    </div>
+                    <div class="content-area">
+                        <a href="@Url.Action( "WorkerDetail", "Worker")"><h3>Marc K. Hammond</h3></a>
+                        <p>Web Software Developer</p>
+                        <p>Administrator</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+
+
