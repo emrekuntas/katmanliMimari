@@ -20,6 +20,6 @@ namespace Framework.Northwind.DataAccess.Concrate.EntityFramework.Mappings
             Property(x => x.CategoryName).HasColumnName("CategoryName");
      
         }
-    {
+    
     }
 }
